@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    @font-face {
+        font-family: 'metropolis';
+        src: url('./metropolis-font-family/Metropolis-Light.otf');
+    }
+
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        /* font-family: metropolis, Arial, sans-serif; */
+        background: rgb(26, 74, 135);
+        background: linear-gradient(243deg, rgba(26, 74, 135, 1) 0%, rgba(22, 53, 100, 1) 50%, rgba(7, 33, 68, 1) 100%);
+    }
+}

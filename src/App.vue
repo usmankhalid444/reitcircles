@@ -1,5 +1,5 @@
 <template>
-  <div class="font-metropolis-light">
+  <div>
     <header>
       <div class="px-3 xl:px-0 lg:text-center py-2 sm:py-3 bg-darkblue">
         <!-- logo start -->
@@ -309,7 +309,9 @@
         </div>
       </div>
       <div class="bg-[#153864] grid grid-cols-2 text-center py3 2xl:py-4">
-        <div><p>Copyright 2022 Flac Finance</p></div>
+        <div>
+          <p class="font-metropolis-italic">Copyright 2022 Flac Finance</p>
+        </div>
         <div>
           <ul class="space-x-5">
             <li class="inline"><a href="#">Privacy</a></li>

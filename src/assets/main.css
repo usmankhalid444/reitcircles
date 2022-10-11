@@ -9,6 +9,11 @@
         src: url('./metropolis-font-family/Metropolis-Light.otf');
     }
 
+    @font-face {
+        font-family: 'metropolis-italic';
+        src: url('./metropolis-font-family/Metropolis-LightItalic.otf');
+    }
+
 
     html {
         height: 100%;

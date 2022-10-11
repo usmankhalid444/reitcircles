@@ -13,7 +13,8 @@ module.exports = {
       
   },
    fontFamily: {
-        'metropolis-light': [' metropolis, Arial, sans-serif'],
+        'sans': [' metropolis, Arial, sans-serif'],
+         'metropolis-italic': [' metropolis-italic, Arial, sans-serif'],
       },
     },
   },

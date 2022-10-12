@@ -246,19 +246,20 @@
         </div>
         <table id="phoneBookItems" class="informationTable">
           <!-- items should go here -->
-          <!-- <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>number</th>
-          </tr>
-          <tr>
-            <td v-for="(item, index) in users" :key="index">
-              {{ item.first_name }}
-            </td>
-          </tr> -->
-          {{
-            users
-          }}
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in users" :key="index">
+              <td>{{ item.first_name }}</td>
+              <td>{{ item.last_name }}</td>
+              <td>{{ item.phone }}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </section>
@@ -373,7 +374,11 @@ export default {
   },
   methods: {
     addUser() {
-      this.users.push(this.items);
+      this.users.push({
+        first_name: this.items.first_name,
+        last_name: this.items.last_name,
+        phone: this.items.phone,
+      });
     },
   },
 };

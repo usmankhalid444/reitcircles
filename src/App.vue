@@ -223,6 +223,45 @@
         </div>
       </div>
     </section>
+    <section>
+      <div id="app" class="w-5/12 mx-auto mt-10 text-black my-10">
+        <p><strong>Add a new contact:</strong></p>
+        <div>
+          <label
+            >First Name:
+            <input v-model="items.first_name" type="text" class="userFirstname"
+          /></label>
+          <br />
+          <label
+            >Last Name:
+            <input v-model="items.last_name" type="text" class="userLastname"
+          /></label>
+          <br />
+          <label
+            >Phone:
+            <input v-model="items.phone" type="number" class="userPhone"
+          /></label>
+          <br />
+          <button @click="addUser" class="submitButton">Add New Contact</button>
+        </div>
+        <table id="phoneBookItems" class="informationTable">
+          <!-- items should go here -->
+          <!-- <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>number</th>
+          </tr>
+          <tr>
+            <td v-for="(item, index) in users" :key="index">
+              {{ item.first_name }}
+            </td>
+          </tr> -->
+          {{
+            users
+          }}
+        </table>
+      </div>
+    </section>
     <footer>
       <div class="bg-darkblue mt-10">
         <div class="grid grid-cols-3 w-8/12 mx-auto py-7">
@@ -328,7 +367,14 @@ export default {
   data() {
     return {
       showMobileMenu: false,
+      items: { first_name: "Coder", last_name: "Byte", phone: "8885559999" },
+      users: [],
     };
+  },
+  methods: {
+    addUser() {
+      this.users.push(this.items);
+    },
   },
 };
 </script>

@@ -250,7 +250,7 @@
             <tr>
               <th>First Name</th>
               <th>Last Name</th>
-              <th>Number</th>
+              <th>Phone</th>
             </tr>
           </thead>
           <tbody>
@@ -379,6 +379,7 @@ export default {
         last_name: this.items.last_name,
         phone: this.items.phone,
       });
+      this.users.sort((a, b) => a.last_name.localeCompare(b.last_name));
     },
   },
 };
